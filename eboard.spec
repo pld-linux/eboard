@@ -7,9 +7,6 @@ License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	2ef8e080aebde8d8de270f5335fcb8be
-Source1:	%{name}.desktop
-Source2:	%{name}.png
-Patch0:		%{name}-info.patch
 URL:		http://eboard.sourceforge.net/index.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -31,7 +28,6 @@ szachowymi jak GNUchess, Sjeng czy Crafty.
 
 %prep
 %setup -q
-#%patch0 -p1
 
 %build
 %{__aclocal}
