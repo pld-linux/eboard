@@ -1,12 +1,12 @@
 Summary:	GTK+ chess board interface for ICS and chess engines
 Summary(pl):	Interfejs GTK+ do szachowych programów i serwerów
 Name:		eboard
-Version:	0.9.0
+Version:	1.0.3
 Release:	0.1
-License:	GPL
+License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	2ef8e080aebde8d8de270f5335fcb8be
+# Source0-md5:	833e656549d9fd9191e51b08005633e3
 URL:		http://eboard.sourceforge.net/index.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -32,17 +32,12 @@ szachowymi jak GNUchess, Sjeng czy Crafty.
 %prep
 %setup -q
 
-# it_IT.po is just a copy of it.po
-sed -e 's/^C\(XX\)\?FLAGS=.*//;s/it it_IT/it/' configure.in > configure.in.tmp
-mv -f configure.in.tmp configure.in
-
+#I think it can be do better
 %build
-%{__gettextize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
-%configure
+./configure \
+	--prefix="%{_prefix}" \
+	--compiler="%{__cxx}" \
+	--man-prefix="%{_mandir}"
 %{__make}
 
 %install
@@ -51,12 +46,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang %{name}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
