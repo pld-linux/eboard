@@ -1,5 +1,5 @@
 Summary:	GTK+ chess board interface for ICS and chess engines
-Summary(pl):	Interfejs GTK+ do szachowych programów i serwerów
+Summary(pl.UTF-8):   Interfejs GTK+ do szachowych programÃ³w i serwerÃ³w
 Name:		eboard
 Version:	1.0.3
 Release:	0.1
@@ -23,10 +23,10 @@ Solaris, etc.) based on the GTK+ GUI toolkit. It provides a chess
 board interface to ICS (Internet Chess Servers) like FICS and to chess
 engines like GNU Chess, Sjeng and Crafty.
 
-%description -l pl
-eboard jest interfejsem do programów szachowych dla systemów
-uniksowych opartym na bibliotece GTK+. Umo¿liwia wspó³pracê zarówno z
-internetowymi serwerami szachowymi (ICS) jak równie¿ z programami
+%description -l pl.UTF-8
+eboard jest interfejsem do programÃ³w szachowych dla systemÃ³w
+uniksowych opartym na bibliotece GTK+. UmoÅ¼liwia wspÃ³Å‚pracÄ™ zarÃ³wno z
+internetowymi serwerami szachowymi (ICS) jak rÃ³wnieÅ¼ z programami
 szachowymi jak GNUchess, Sjeng czy Crafty.
 
 %prep
