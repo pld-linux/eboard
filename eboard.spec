@@ -1,5 +1,5 @@
 Summary:	GTK+ chess board interface for ICS and chess engines
-Summary(pl.UTF-8):   Interfejs GTK+ do szachowych programów i serwerów
+Summary(pl.UTF-8):	Interfejs GTK+ do szachowych programów i serwerów
 Name:		eboard
 Version:	1.0.3
 Release:	0.1
