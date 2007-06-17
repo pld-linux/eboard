@@ -1,13 +1,14 @@
 Summary:	GTK+ chess board interface for ICS and chess engines
 Summary(pl.UTF-8):	Interfejs GTK+ do szachowych programów i serwerów
 Name:		eboard
-Version:	1.0.3
-Release:	0.1
+Version:	1.0.4
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	833e656549d9fd9191e51b08005633e3
-URL:		http://eboard.sourceforge.net/index.html
+# Source0-md5:	2bd2927a670ed23594cbf524bc5746ef
+Source1:	%{name}.desktop
+URL:		http://www.bergo.eng.br/eboard/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -42,15 +43,22 @@ szachowymi jak GNUchess, Sjeng czy Crafty.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install icon-eboard.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.xpm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog README TODO Documentation/*.txt
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
+%{_desktopdir}/%{name}.desktop
 %{_mandir}/man[16]/*
+%{_pixmapsdir}/%{name}.xpm
