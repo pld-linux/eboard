@@ -9,7 +9,6 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	2bd2927a670ed23594cbf524bc5746ef
 Source1:	%{name}.desktop
 URL:		http://www.bergo.eng.br/eboard/
-BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2.6
 BuildRequires:	imlib-devel
 BuildRequires:	libstdc++-devel
