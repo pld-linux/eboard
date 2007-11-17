@@ -1,3 +1,5 @@
+# TODO:
+# - check why it fails with ccache turned on
 Summary:	GTK+ chess board interface for ICS and chess engines
 Summary(pl.UTF-8):	Interfejs GTK+ do szachowych programów i serwerów
 Name:		eboard
@@ -12,7 +14,8 @@ URL:		http://www.bergo.eng.br/eboard/
 BuildRequires:	gtk+-devel >= 1.2.6
 BuildRequires:	imlib-devel
 BuildRequires:	libstdc++-devel
-Requires:	gnuchess
+Suggests:	crafty
+Suggests:	gnuchess
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
