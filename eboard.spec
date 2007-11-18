@@ -14,6 +14,7 @@ URL:		http://www.bergo.eng.br/eboard/
 BuildRequires:	gtk+-devel >= 1.2.6
 BuildRequires:	imlib-devel
 BuildRequires:	libstdc++-devel
+Suggests:	Sjeng-Free
 Suggests:	crafty
 Suggests:	gnuchess
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
