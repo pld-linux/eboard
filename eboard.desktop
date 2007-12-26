@@ -2,10 +2,9 @@
 Name=eboard
 Comment=GTK+ chess board interface for ICS and chess engines
 Comment[pl]=Interfejs GTK+ do szachowych programów i serwerów
-Icon=eboard.xpm
+Icon=eboard
 Exec=eboard
 Terminal=false
 Type=Application
 Categories=Game;BoardGame;
-Encoding=UTF-8
 # vi: encoding=utf-8
