@@ -1,0 +1,22 @@
+--- eboard-1.1.1/ntext.h.orig	2008-02-22 16:51:22.000000000 +0100
++++ eboard-1.1.1/ntext.h	2010-03-27 10:10:15.309464746 +0100
+@@ -84,7 +84,7 @@
+   virtual ~NText();
+ 
+   void setFont(const char *font);
+-  void append(const char *text, int len, int color);
++  void append(char *text, int len, int color);
+   void pageUp(float pages);
+   void pageDown(float pages);
+ 
+--- eboard-1.1.1/ntext.cc.orig	2008-02-22 16:51:22.000000000 +0100
++++ eboard-1.1.1/ntext.cc	2010-03-27 10:10:20.649464452 +0100
+@@ -234,7 +234,7 @@
+     repaint();
+ }
+ 
+-void NText::append(const char *text, int len, int color) {
++void NText::append(char *text, int len, int color) {
+   int i;
+   NLine *nl;
+   char *p;
