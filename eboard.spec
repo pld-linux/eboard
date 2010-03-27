@@ -4,16 +4,18 @@ Summary:	GTK+ chess board interface for ICS and chess engines
 Summary(pl.UTF-8):	Interfejs GTK+ do szachowych programów i serwerów
 Name:		eboard
 Version:	1.1.1
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/eboard/%{name}-%{version}.tar.bz2
 # Source0-md5:	03dcdaa2bc85218b1b18c4bee276fea7
 Source1:	%{name}.desktop
+Patch0:		%{name}-const.patch
 URL:		http://www.bergo.eng.br/eboard/
 BuildRequires:	gtk+-devel >= 1.2.6
 BuildRequires:	imlib-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libpng-devel
 Suggests:	Sjeng-Free
 Suggests:	crafty
 Suggests:	gnuchess
