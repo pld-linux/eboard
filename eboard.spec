@@ -12,10 +12,11 @@ Source0:	http://dl.sourceforge.net/eboard/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Patch0:		%{name}-const.patch
 URL:		http://www.bergo.eng.br/eboard/
-BuildRequires:	gtk+-devel >= 1.2.6
-BuildRequires:	imlib-devel
-BuildRequires:	libstdc++-devel
+BuildRequires:	gtk+2-devel
 BuildRequires:	libpng-devel
+BuildRequires:	libstdc++-devel
+BuildRequires:	perl-base
+BuildRequires:	pkgconfig
 Suggests:	Sjeng-Free
 Suggests:	crafty
 Suggests:	gnuchess
