@@ -1,16 +1,15 @@
-# TODO:
-# - check why it fails with ccache turned on
 Summary:	GTK+ chess board interface for ICS and chess engines
 Summary(pl.UTF-8):	Interfejs GTK+ do szachowych programów i serwerów
 Name:		eboard
 Version:	1.1.1
-Release:	6
+Release:	7
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/eboard/%{name}-%{version}.tar.bz2
 # Source0-md5:	03dcdaa2bc85218b1b18c4bee276fea7
 Source1:	%{name}.desktop
 Patch0:		%{name}-const.patch
+Patch1:		%{name}-libpng15.patch
 URL:		http://www.bergo.eng.br/eboard/
 BuildRequires:	gtk+2-devel
 BuildRequires:	libpng-devel
@@ -37,12 +36,14 @@ szachowymi jak GNUchess, Sjeng czy Crafty.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 # This way is needed, because package contains non-standard configure file
 %build
 ./configure \
 	--prefix="%{_prefix}" \
 	--compiler="%{__cxx}" \
+	--extra-libs="dl" \
 	--man-prefix="%{_mandir}"
 %{__make}
 
